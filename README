@@ -1,2 +1,5 @@
-Do NOT add any new projects to the overall portfolio .git.  We want to split those up (while
-retaining history) into separate repos anyway (big mess for github though).
+Free Code Camp Pomodoro Clock project.  This version does not use Bootstrap or React.
+
+It may have FCC's test bundle (currently in Beta) linked in, but that can be commented out
+in index.html and things will still work.
+
