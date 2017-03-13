@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>Pomodoro Clock</title>
+  <meta name="description" content="Clock Web App for Pomodoro Time Management" />
+  <meta charset="utf-8">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- in lieu of reset, normalize, etc -->
+  <link href="css/reset-jseric.css" rel="stylesheet" type="text/css" >
+
+  <!--Then our own css-->
+  <link href="css/styles.css" rel="stylesheet" type="text/css" >
+
+  <!--Note all JS is below including jQuery-->
+
+</head>
+
+<body class="text-center">
+
+  <div> <!-- overall container -->
+
+    <header>
+      <h1>Pomodoro Clock</h1>
+      <h2>a <span id="fcc-name">freeCodeCamp</span> challenge</h2>
+    </header>
+
+    <!-- Duration Control Section -->
+    <section>
+      <div id="duration-controls">
+        <div class="timer-control-group">
+          <label id="break-label">Break Length</label>
+          <div class="timer-control">
+            <button type="button" name="button" id="break-decrement"><i class="fa fa-arrow-down fa-lg"></i></button>
+            <span id="break-length">5</span>
+            <button type="button" name="button" id="break-increment"><i class="fa fa-arrow-up fa-lg"></i></button>
+          </div>
+        </div>
+
+        <div class="timer-control-group">
+          <label id="session-label">Session Length</label>
+          <div class="timer-control">
+            <button type="button" name="button" id="session-decrement"><i class="fa fa-arrow-down fa-lg"></i></button>
+            <span id="session-length">25</span>
+            <button type="button" name="button" id="session-increment"><i class="fa fa-arrow-up fa-lg"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clock and Clock State Section -->
+    <section id="clock">
+      <h2 id="timer-label">Session</h2>
+      <div id="time-left">25:00</div>
+    </section>
+
+    <!-- play/pause/reset controls -->
+    <section id="playback-container">
+      <div class="playback-controls">
+        <button type="button" name="button" id="start_stop"><i class="play-btn fa fa-play"></i></button>
+      </div>
+      <div class="playback-controls">
+        <button type="button" name="button" id="reset"><i class="fa fa-refresh"></i></button>
+      </div>
+    </section>
+
+    <section>
+      <audio id="beep" preload="auto" src="audio/gong.wav" />
+      <!-- alternate location for gong file, but doesn't work -->
+      <!-- src = "https://www.dropbox.com/l/scl/AABaJ8voVetsZ4KHTuYnB_wh9p_8DWBpy-o" -->
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script>
+        <a href="http://donaldcameron77.info">Donald Cameron</a> - all rights reserved</p>
+      <p>A big thanks to <a href="https://www.freecodecamp.com/map">Free Code Camp</a></p>
+    </footer>
+
+  </div> <!-- overall container -->
+
+  <!-- scripts go at the bottom of <body> so as not to delay initial page loading and display -->
+
+  <!-- JQUERY -->
+  <!-- https://developers.google.com/speed/libraries/devguide#jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <!-- FCC new testing setup -->
+  <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
+
+  <!-- FCC new testing setup - local for debugging -->
+  <!-- <script src="js/bundle.js"></script> -->
+
+  <!-- Site-specific JavaScript -->
+  <script src="js/scripts.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+</body>
+
+</html>
